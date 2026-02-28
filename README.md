@@ -1,16 +1,16 @@
 # pypour
 
-Un transpileur Python en fran\u00e7ais. \u00c9crivez du Python avec des mots-cl\u00e9s et des fonctions int\u00e9gr\u00e9es en fran\u00e7ais, puis ex\u00e9cutez-le directement ou transpilez-le en Python standard.
+Un transpileur Python en français. Écrivez du Python avec des mots-clés et des fonctions intégrées en français, puis exécutez-le directement ou transpilez-le en Python standard.
 
 ## Installation
 
-### Version C (recommand\u00e9e)
+### Version C (recommandée)
 
 ```bash
 make
 ```
 
-Cela construit `pypour-bin` \u2014 un ex\u00e9cutable autonome sans d\u00e9pendances au-del\u00e0 de `python3` (utilis\u00e9 pour ex\u00e9cuter le code transpil\u00e9).
+Cela construit `pypour-bin` — un exécutable autonome sans dépendances au-delà de `python3` (utilisé pour exécuter le code transpilé).
 
 ### Version Python
 
@@ -20,7 +20,7 @@ pip install -e .
 
 ## Utilisation
 
-Ex\u00e9cuter un fichier `.ppour` :
+Exécuter un fichier `.ppour` :
 ```bash
 pypour run fichier.ppour
 ```
@@ -30,7 +30,7 @@ Transpiler en Python (afficher sur stdout) :
 pypour transpile fichier.ppour
 ```
 
-Ex\u00e9cuter et sauvegarder la sortie transpil\u00e9e :
+Exécuter et sauvegarder la sortie transpilée :
 ```bash
 pypour run fichier.ppour -o sortie.py
 ```
@@ -52,9 +52,9 @@ sinon:
     afficher("C'est faux!")
 ```
 
-## Mots-cl\u00e9s fran\u00e7ais
+## Mots-clés français
 
-| Fran\u00e7ais | Python |
+| Français | Python |
 |--------|--------|
 | si | if |
 | sinon | else |
@@ -83,9 +83,9 @@ sinon:
 | continuer | continue |
 | casser | break |
 
-## Fonctions int\u00e9gr\u00e9es fran\u00e7aises
+## Fonctions intégrées françaises
 
-| Fran\u00e7ais | Python |
+| Français | Python |
 |--------|--------|
 | afficher | print |
 | saisir | input |
@@ -109,11 +109,11 @@ sinon:
 
 ## Messages d'erreur
 
-Les erreurs sont traduites en fran\u00e7ais :
+Les erreurs sont traduites en français :
 ```
-ErreurDeNom: 'x' n'est pas d\u00e9fini
+ErreurDeNom: 'x' n'est pas défini
 ErreurDeSyntaxe: syntaxe invalide
-ErreurDeDivisionParZ\u00e9ro: division par z\u00e9ro
+ErreurDeDivisionParZéro: division par zéro
 ```
 
 ---
@@ -130,7 +130,7 @@ A French-localized Python transpiler. Write Python using French keywords and bui
 make
 ```
 
-This builds `pypour-bin` \u2014 a standalone binary with no dependencies beyond `python3` (used to execute transpiled code).
+This builds `pypour-bin` — a standalone binary with no dependencies beyond `python3` (used to execute transpiled code).
 
 ### Python version
 
@@ -231,7 +231,7 @@ sinon:
 
 Errors are translated to French:
 ```
-ErreurDeNom: 'x' n'est pas d\u00e9fini
+ErreurDeNom: 'x' n'est pas défini
 ErreurDeSyntaxe: syntaxe invalide
-ErreurDeDivisionParZ\u00e9ro: division par z\u00e9ro
+ErreurDeDivisionParZéro: division par zéro
 ```
