@@ -4,6 +4,16 @@ A French-localized Python transpiler. Write Python using French keywords and bui
 
 ## Installation
 
+### C version (recommended)
+
+```bash
+make
+```
+
+This builds `pypour-bin` — a standalone binary with no dependencies beyond `python3` (used to execute transpiled code).
+
+### Python version
+
 ```bash
 pip install -e .
 ```
