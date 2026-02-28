@@ -11,6 +11,10 @@ def cmd_run(args):
         print(f"Erreur: fichier '{args.file}' introuvable.", file=sys.stderr)
         sys.exit(1)
 
+    if args.output:
+        with open(args.output, "w", encoding="utf-8") as f:
+            f.write(python_source)
+
     namespace = {"__name__": "__main__"}
     try:
         exec(compile(python_source, args.file, "exec"), namespace)
@@ -40,6 +44,7 @@ def main():
 
     run_p = sub.add_parser("run", help="Exécuter un fichier .ppour")
     run_p.add_argument("file", help="Chemin vers le fichier .ppour")
+    run_p.add_argument("-o", "--output", help="Sauvegarder le Python généré dans un fichier")
 
     tr_p = sub.add_parser("transpile", help="Afficher le Python généré")
     tr_p.add_argument("file", help="Chemin vers le fichier .ppour")
