@@ -1,0 +1,12 @@
+# Mon premier programme pypour!
+
+fonction saluer(nom):
+    afficher("Bonjour, " + nom + "!")
+
+pour i dans portee(3):
+    saluer("monde")
+
+si vrai:
+    afficher("C'est vrai!")
+sinon:
+    afficher("C'est faux!")
