@@ -15,6 +15,7 @@ ERROR_NAMES = {
     "ZeroDivisionError": "ErreurDeDivisionParZero",
     "FileNotFoundError": "ErreurFichierIntrouvable",
     "ImportError": "ErreurDImportation",
+    "ModuleNotFoundError": "ErreurModuleIntrouvable",
 }
 
 # Common English message fragments → French translations
@@ -37,6 +38,7 @@ MESSAGE_FRAGMENTS = {
     "invalid literal for": "valeur littérale invalide pour",
     "No module named": "Aucun module nommé",
     "No such file or directory": "Aucun fichier ou répertoire de ce nom",
+    "bad operand type for unary": "type d'opérande incorrect pour l'opérateur unaire",
 }
 
 
