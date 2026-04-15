@@ -1,0 +1,42 @@
+importer tortue
+
+###########################################################
+### Start code ####
+
+déf dessiner_un_carré(tortue, x, y, taille, couleur):
+    """Dessine un carré aux (x, y) avec la taille et couleur spésifiées."""
+    tortue.stylo_monter()
+    tortue.aller(x, y)
+    tortue.stylo_descendre()
+    tortue.couleur_remplir(couleur)
+    tortue.commencer_remplir()
+    pour _ dans portee(4):
+        tortue.avant(taille)
+        tortue.droit(90)
+    tortue.final_remplir()
+
+# Configurer l'ecran
+écran = tortue.Écran()
+écran.titre("Échiquer")
+écran.couleurdefond("blanche")
+
+# Initialisation la tortue
+drawer = tortue.Tortue()
+drawer.vitesse(0)  # Vitesse dessin la plus rapide
+
+# Constantes
+taille_carré = 50 # Loungueur du coté de chaque carré
+x_depart = -200    # Coordonneé x de depart
+y_depart = 200     # Coordonneé y de depart
+
+# Dessiner de échiquer
+pour ligne dans portee(8):
+    pour colonne dans portee(8):
+        x = x_depart + colonne * taille_carré
+        y = y_depart - ligne * taille_carré
+        couleur = "noir" if (ligne + colonne) % 2 == 0 else "blanche"
+        dessiner_un_carré(drawer, x, y, taille_carré, couleur)
+
+# Finalise le dessin
+drawer.tortuecachée()
+tortue.faite()

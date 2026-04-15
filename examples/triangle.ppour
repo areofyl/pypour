@@ -1,0 +1,4 @@
+# Imprimer le triangle
+
+pour i dans portee(3):
+    afficher('*' * (i + 1))
