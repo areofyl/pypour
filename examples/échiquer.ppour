@@ -34,7 +34,7 @@ pour ligne dans portee(8):
     pour colonne dans portee(8):
         x = x_depart + colonne * taille_carré
         y = y_depart - ligne * taille_carré
-        couleur = "noir" si (ligne + colonne) % 2 == 0 sinon "blanche"
+        couleur = "Noir" si (ligne + colonne) % 2 == 0 sinon "Blanche"
         dessiner_un_carré(drawer, x, y, taille_carré, couleur)
 
 # Finalise le dessin

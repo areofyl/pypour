@@ -15,9 +15,9 @@ COULEUR = {
 COULEUR_ = {v: k for k, v in COULEUR.items()}
 
 def tocol(c):
-    return COULEUR.get(c, c)
+    return COULEUR.get(c.lower(), c)
 def fromcol(c):
-    d = COULEUR_.get(c, c)
+    d = COULEUR_.get(c.lower(), c)
     return d
 
 class _Écran:
