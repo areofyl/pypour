@@ -1,0 +1,91 @@
+importer turtle
+
+def faite():
+    turtle.done()
+def aurevoir():
+    turtle.bye()
+
+
+COULEUR = {
+    "blanche": "white",
+    "noir": "black",
+}
+COULEUR_ = {v: k for k, v in COULEUR.items()}
+
+def tocol(c):
+    return COULEUR.get(c.lower(), c)
+def fromcol(c):
+    d = COULEUR_.get(c.lower(), c)
+    return d
+
+class _Écran:
+    def __init__(self, screen):
+        self._screen = screen
+
+    déf titre(self, texte):
+        self._screen.title(texte)
+
+    déf installation(self, largeur = None, hauteur = None):
+        self._screen.setup(largeur, hauteur)
+
+    déf couleurdefond(self, value = None):
+        if value == None:
+            return fromcol(self._screen.bgcolor())
+        else:
+            self._screen.bgcolor(tocol(value))
+
+    déf écouter(self, xfactice=None, yfactice=None):
+        self._screen.listen(xfactice, yfactice)
+
+    déf encliquant(self, fun, btn=1, add=None):
+        self._screen.onclick(fun, btn, add)
+    déf claire(self):
+        self._screen.clear()
+    déf aurevoir(self):
+        self._screen.bye()
+    
+def Écran():
+    rés = _Écran(turtle.Screen())
+    retourner rés
+
+class _Tortue:
+    def __init__(self, turtle):
+        self._turtle = turtle
+
+    déf vitesse(self, valeur = None):
+        if valeur == None:
+            return self._turtle.speed()
+        else:
+            self._turtle.speed(valeur)
+
+    déf stylo_monter(self):
+        self._turtle.penup()
+    déf stylo_descendre(self):
+        self._turtle.pendown()
+
+    déf aller(self, x, y):
+        self._turtle.goto(x, y)
+    déf cercle(self, rayon, étendue=None, mesures=None):
+        self._turtle.circle(rayon, étendue, mesures)
+    déf couleur(self, couleur):
+        self._turtle.color(tocol(couleur))
+    déf couleur_remplir(self, couleur):
+        self._turtle.fillcolor(tocol(couleur))
+    déf commencer_remplir(self):
+        self._turtle.begin_fill()
+    déf final_remplir(self):
+        self._turtle.end_fill()
+    déf avant(self, couleur):
+        self._turtle.forward(couleur)
+    déf droit(self, angle):
+        self._turtle.right(angle)
+    déf gauche(self, angle):
+        self._turtle.left(angle)
+    déf tortuecachée(self):
+        self._turtle.hideturtle()
+    déf écrire(self, arg, move=False, align='left', font=('Arial', 8, 'normal')):
+        self._turtle.write(arg, move, align, font)
+
+def Tortue():
+    rés = _Tortue(turtle.Turtle())
+    retourner rés
