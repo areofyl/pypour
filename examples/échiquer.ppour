@@ -21,8 +21,8 @@ déf dessiner_un_carré(tortue, x, y, taille, couleur):
 écran.couleurdefond("blanche")
 
 # Initialisation la tortue
-drawer = tortue.Tortue()
-drawer.vitesse(0)  # Vitesse dessin la plus rapide
+tiroir = tortue.Tortue()
+tiroir.vitesse(0)  # Vitesse dessin la plus rapide
 
 # Constantes
 taille_carré = 50 # Loungueur du coté de chaque carré
@@ -35,8 +35,8 @@ pour ligne dans portee(8):
         x = x_depart + colonne * taille_carré
         y = y_depart - ligne * taille_carré
         couleur = "Noir" si (ligne + colonne) % 2 == 0 sinon "Blanche"
-        dessiner_un_carré(drawer, x, y, taille_carré, couleur)
+        dessiner_un_carré(tiroir, x, y, taille_carré, couleur)
 
 # Finalise le dessin
-drawer.tortuecachée()
+tiroir.tortuecachée()
 tortue.faite()
