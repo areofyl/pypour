@@ -1,20 +1,213 @@
 importer turtle
 
-def faite():
+déf faite():
     turtle.done()
-def aurevoir():
+déf aurevoir():
     turtle.bye()
 
 
 COULEUR = {
     "blanche": "white",
+    "blanc fantôme": "ghost white",
+    "fumée blanche": "white smoke",
+    #"gainsboro": "gainsboro",
+    "floral blanc": "floral white",
+    "vieille dentelle": "old lace",
+    "lin": "linen",
+    "blanc antique": "antique white",
+    "fouet de papaye": "papaya whip",
+    "amandes blanchies": "blanched almond",
+    #"bisque": "bisque",
+    "chou à la pêche": "peach puff",
+    "blanc navajo": "navajo white",
+    "chiffon au citron": "lemon chiffon",
+    "crème à la menthe": "mint cream",
+    #"alice blue": "alice blue",
+    "lavande": "lavender",
+    "rose lavande": "lavender blush",
+    "rose brumeuse": "misty rose",
+    "gris ardoise foncé": "dark slate gray",
+    "gris terne": "dim gray",
+    "gris ardoise": "slate gray",
+    "gris ardoise clair": "light slate gray",
+    "gris clair": "light grey",
+    "bleu nuit": "midnight blue",
+    "marin": "navy",
+    "bleuet": "cornflower blue",
+    "bleu ardoise foncé": "dark slate blue",
+    "bleu ardoise": "slate blue",
+    "bleu ardoise moyen": "medium slate blue",
+    "bleu ardoise clair": "light slate blue",
+    "bleu moyen": "medium blue",
+    "bleu royal": "royal blue",
+    #"blue": "blue",
+    #"dodger bleu": "dodger blue",
+    "bleu ciel profond": "deep sky blue",
+    "bleu ciel": "sky blue",
+    "bleu ciel clair": "light sky blue",
+    "bleu acier": "steel blue",
+    "bleu acier clair": "light steel blue",
+    "bleu clair": "light blue",
+    "bleu poudre": "powder blue",
+    "turquoise pâle": "pale turquoise",
+    "turquoise foncé": "dark turquoise",
+    "turquoise moyen": "medium turquoise",
+    #"turquoise": "turquoise",
+    #"cyan": "cyan",
+    "cyan clair": "light cyan",
+    "bleu cadet": "cadet blue",
+    "aigue-marine moyenne": "medium aquamarine",
+    #"bleu vert": "aquamarine",
+    "vert foncé": "dark green",
+    "vert olive foncé": "dark olive green",
+    "vert foncé de la mer": "dark sea green",
+    "vert de mer": "sea green",
+    "vert mer moyen": "medium sea green",
+    "vert clair": "light sea green",
+    "vert pâle": "pale green",
+    "vert printanier": "spring green",
+    "pelouse verte": "lawn green",
+    "vert moyen du printemps": "medium spring green",
+    "vert jaune": "green yellow",
+    "vert citron": "lime green",
+    "jaune vert": "yellow green",
+    "vert forêt": "forest green",
+    "vert olive": "olive drab",
+    "kaki foncé": "dark khaki",
+    "kaki": "khaki",
+    "verge d'or pâle": "pale goldenrod",
+    "jaune d'or": "light goldenrod yellow",
+    "jaune clair": "light yellow",
+    #"jaune": "yellow",
+    #"or": "gold",
+    "verge d'or claire": "light goldenrod",
+    #"verge d'or": "goldenrod",
+    "verge d'or foncée": "dark goldenrod",
+    "brun rosé": "rosy brown",
+    "rouge indien": "indian red",
+    "marron selle": "saddle brown",
+    "brun sable": "sandy brown",
+    "saumon foncé": "dark salmon",
+    #"saumon": "salmon",
+    "saumon clair": "light salmon",
+    #"orange": "orange",
+    "orange foncé": "dark orange",
+    #"corail": "coral",
+    "corail clair": "light coral",
+    #"tomate": "tomato",
+    "rouge orange": "orange red",
+    #"rouge": "red",
+    "rose vif": "hot pink",
+    "rose foncé": "deep pink",
+    #"rose": "pink",
+    "rose clair": "light pink",
+    "rouge violet pâle": "pale violet red",
+    #"bordeaux": "maroon",
+    "rouge violet moyen": "medium violet red",
+    "rouge violet": "violet red",
+    "orchidée moyenne": "medium orchid",
+    "orchidée noire": "dark orchid",
+    "violet foncé": "dark violet",
+    "bleu violet": "blue violet",
+    #"violet": "purple",
+    "violet moyen": "medium purple",
+    #"chardon": "thistle",
     "noir": "black",
 }
+
+déf map_with_un(fr, en, count):
+    global COULEUR
+    pour i dans portee(100):
+        COULEUR[fr.lower() + str(i)] = en.lower() + str(i)
+déf map_wit_default(fr, en, count):
+    global COULEUR
+    pour i dans portee(100):
+        si i == 1:
+            COULEUR[fr.lower()] = en.lower()
+        COULEUR[fr.lower() + str(i)] = en.lower() + str(i)
+map_wit_default("neige", "snow", 4)
+map_wit_default("gris", "gray", 100)
+map_with_un("coquillage", "seashell", 4)
+map_with_un("BlancAntique", "AntiqueWhite", 4)
+map_with_un("PêchePâte", "PeachPuff", 4)
+map_with_un("NavajoBlanc", "NavajoWhite", 4)
+map_with_un("ChiffonCitron", "LemonChiffon", 4)
+map_with_un("soiedemaïs", "cornsilk", 4)
+map_with_un("ivoire", "ivory", 4)
+map_with_un("miellat", "honeydew", 4)
+map_with_un("RoseLavande", "LavenderBlush", 4)
+map_with_un("RoseBrumeuse", "MistyRose", 4)
+map_with_un("azuré", "azure", 4)
+map_with_un("BleuArdoise", "SlateBlue", 4)
+map_with_un("BleuRoyal", "RoyalBlue", 4)
+map_wit_default("bleu", "blue", 100)
+#map_with_un("DodgerBlue", "DodgerBlue", 4)
+map_with_un("BleuAcier", "SteelBlue", 4)
+map_with_un("bleucielprofond", "DeepSkyBlue", 4)
+map_with_un("bleuciel", "SkyBlue", 4)
+map_with_un("bleucielclair", "LightSkyBlue", 4)
+map_with_un("grisardoise", "SlateGray", 4)
+map_with_un("BleuAcierClair", "LightSteelBlue", 4)
+map_with_un("bleuclair", "LightBlue", 4)
+map_with_un("CyanClair", "LightCyan", 4)
+map_with_un("turquoisePâle", "PaleTurquoise", 4)
+map_with_un("grisardoise", "CadetBlue", 4)
+#map_with_un("turquoise", "turquoise", 4)
+#map_with_un("cyan", "cyan", 4)
+map_with_un("GrisArdoiseFoncé", "DarkSlateGray", 4)
+map_with_un("BleuVert", "aquamarine", 4)
+map_with_un("VertFoncéDeLaMer", "DarkSeaGreen", 4)
+map_with_un("VertDeMer", "SeaGreen", 4)
+map_with_un("VertPâle", "PaleGreen", 4)
+map_with_un("vertPrintanier", "SpringGreen", 4)
+map_with_un("vert", "green", 4)
+map_with_un("chartreuse", "chartreuse", 4)
+map_with_un("VertOlive", "OliveDrab", 4)
+map_with_un("VertOliveFoncé", "DarkOliveGreen", 4)
+map_with_un("kaki", "khaki", 4)
+map_with_un("VergeD'orClaire", "LightGoldenrod", 4)
+map_with_un("JauneClair", "LightYellow", 4)
+map_with_un("Jaune", "yellow", 4)
+map_with_un("or", "gold", 4)
+map_with_un("VergeD'or", "goldenrod", 4)
+map_with_un("VergeD'orFoncé", "DarkGoldenrod", 4)
+map_with_un("BrunRosé", "RosyBrown", 4)
+map_with_un("RougeIndien", "IndianRed", 4)
+#map_with_un("sienne", "sienna", 4)
+map_with_un("BoisRobuste", "burlywood", 4)
+map_with_un("blé", "wheat", 4)
+map_with_un("tanné", "tan", 4)
+map_with_un("chocolat", "chocolate", 4)
+map_with_un("BriquesRéfractaires", "firebrick", 4)
+map_with_un("brun", "brown", 4)
+map_wit_default("saumon", "salmon", 4)
+map_with_un("SaumonClaire", "LightSalmon", 4)
+#map_with_un("orange", "orange", 4)
+map_with_un("OrangeFoncé", "DarkOrange", 4)
+map_wit_default("corail", "coral", 4)
+map_with_un("tomate", "tomato", 4)
+map_with_un("rougeOrange", "OrangeRed", 4)
+map_wit_default("rouge", "red", 4)
+map_with_un("roseFoncé", "DeepPink", 4)
+map_with_un("roseVif", "HotPink", 4)
+#map_with_un("rose", "pink", 4)
+map_with_un("roseClair", "LightPink", 4)
+map_with_un("rougeVioletPâle", "PaleVioletRed", 4)
+map_with_un("bordeaux", "maroon", 4)
+map_with_un("rougeViolet", "VioletRed", 4)
+#map_with_un("magenta", "magenta", 4)
+map_with_un("orchidée", "orchid", 4)
+map_with_un("prune", "plum", 4)
+map_with_un("orchidéeMoyenne", "MediumOrchid", 4)
+map_with_un("orchidéeFoncé", "DarkOrchid", 4)
+map_wit_default("violet", "purple", 4)
+map_with_un("violetMoyenne", "MediumPurple", 4)
+map_wit_default("chardon", "thistle", 4)
 COULEUR_ = {v: k for k, v in COULEUR.items()}
 
-def tocol(c):
+déf tocol(c):
     return COULEUR.get(c.lower(), c)
-def fromcol(c):
+déf fromcol(c):
     d = COULEUR_.get(c.lower(), c)
     return d
 
