@@ -1,12 +1,9 @@
 importer turtle
 
-###########################################################
-# Workaround for Ppour inability to process multiple files.
 def faite():
     turtle.done()
 def aurevoir():
     turtle.bye()
-tortue = turtle
 
 
 COULEUR = {
@@ -45,7 +42,7 @@ class _Écran:
     déf claire(self):
         self._screen.clear()
     déf aurevoir(self):
-        self._screen.buy()
+        self._screen.bye()
     
 def Écran():
     rés = _Écran(turtle.Screen())
