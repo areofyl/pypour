@@ -7,8 +7,6 @@ def faite():
 def aurevoir():
     turtle.bye()
 tortue = turtle
-tortue.faite = faite
-tortue.aurevoir = aurevoir
 
 
 COULEUR = {
@@ -52,7 +50,6 @@ class _Écran:
 def Écran():
     rés = _Écran(turtle.Screen())
     retourner rés
-tortue.Écran = Écran
 
 class _Tortue:
     def __init__(self, turtle):
@@ -95,4 +92,3 @@ class _Tortue:
 def Tortue():
     rés = _Tortue(turtle.Turtle())
     retourner rés
-tortue.Tortue = Tortue
