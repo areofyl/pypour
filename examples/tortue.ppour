@@ -4,8 +4,11 @@ importer turtle
 # Workaround for Ppour inability to process multiple files.
 def faite():
     turtle.done()
+def aurevoir():
+    turtle.bye()
 tortue = turtle
 tortue.faite = faite
+tortue.aurevoir = aurevoir
 
 
 COULEUR = {
@@ -27,11 +30,24 @@ class _Écran:
     déf titre(self, texte):
         self._screen.title(texte)
 
+    déf installation(self, largeur = None, hauteur = None):
+        self._screen.setup(largeur, hauteur)
+
     déf couleurdefond(self, value = None):
         if value == None:
             return fromcol(self._screen.bgcolor())
         else:
             self._screen.bgcolor(tocol(value))
+
+    déf écouter(self, xfactice=None, yfactice=None):
+        self._screen.listen(xfactice, yfactice)
+
+    déf encliquant(self, fun, btn=1, add=None):
+        self._screen.onclick(fun, btn, add)
+    déf claire(self):
+        self._screen.clear()
+    déf aurevoir(self):
+        self._screen.buy()
     
 def Écran():
     rés = _Écran(turtle.Screen())
@@ -55,6 +71,10 @@ class _Tortue:
 
     déf aller(self, x, y):
         self._turtle.goto(x, y)
+    déf cercle(self, rayon, étendue=None, mesures=None):
+        self._turtle.circle(rayon, étendue, mesures)
+    déf couleur(self, couleur):
+        self._turtle.color(tocol(couleur))
     déf couleur_remplir(self, couleur):
         self._turtle.fillcolor(tocol(couleur))
     déf commencer_remplir(self):
@@ -69,6 +89,8 @@ class _Tortue:
         self._turtle.left(angle)
     déf tortuecachée(self):
         self._turtle.hideturtle()
+    déf écrire(self, arg, move=False, align='left', font=('Arial', 8, 'normal')):
+        self._turtle.write(arg, move, align, font)
 
 def Tortue():
     rés = _Tortue(turtle.Turtle())
