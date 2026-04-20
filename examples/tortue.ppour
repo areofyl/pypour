@@ -119,14 +119,14 @@ déf map_with_un(fr, en, count):
     global COULEUR
     pour i dans portee(100):
         COULEUR[fr.lower() + str(i)] = en.lower() + str(i)
-déf map_wit_default(fr, en, count):
+déf map_with_default(fr, en, count):
     global COULEUR
     pour i dans portee(100):
         si i == 1:
             COULEUR[fr.lower()] = en.lower()
         COULEUR[fr.lower() + str(i)] = en.lower() + str(i)
-map_wit_default("neige", "snow", 4)
-map_wit_default("gris", "gray", 100)
+map_with_default("neige", "snow", 4)
+map_with_default("gris", "gray", 100)
 map_with_un("coquillage", "seashell", 4)
 map_with_un("BlancAntique", "AntiqueWhite", 4)
 map_with_un("PêchePâte", "PeachPuff", 4)
@@ -140,7 +140,7 @@ map_with_un("RoseBrumeuse", "MistyRose", 4)
 map_with_un("azuré", "azure", 4)
 map_with_un("BleuArdoise", "SlateBlue", 4)
 map_with_un("BleuRoyal", "RoyalBlue", 4)
-map_wit_default("bleu", "blue", 100)
+map_with_default("bleu", "blue", 100)
 #map_with_un("DodgerBlue", "DodgerBlue", 4)
 map_with_un("BleuAcier", "SteelBlue", 4)
 map_with_un("bleucielprofond", "DeepSkyBlue", 4)
@@ -180,14 +180,14 @@ map_with_un("tanné", "tan", 4)
 map_with_un("chocolat", "chocolate", 4)
 map_with_un("BriquesRéfractaires", "firebrick", 4)
 map_with_un("brun", "brown", 4)
-map_wit_default("saumon", "salmon", 4)
+map_with_default("saumon", "salmon", 4)
 map_with_un("SaumonClaire", "LightSalmon", 4)
 #map_with_un("orange", "orange", 4)
 map_with_un("OrangeFoncé", "DarkOrange", 4)
-map_wit_default("corail", "coral", 4)
+map_with_default("corail", "coral", 4)
 map_with_un("tomate", "tomato", 4)
 map_with_un("rougeOrange", "OrangeRed", 4)
-map_wit_default("rouge", "red", 4)
+map_with_default("rouge", "red", 4)
 map_with_un("roseFoncé", "DeepPink", 4)
 map_with_un("roseVif", "HotPink", 4)
 #map_with_un("rose", "pink", 4)
@@ -200,9 +200,9 @@ map_with_un("orchidée", "orchid", 4)
 map_with_un("prune", "plum", 4)
 map_with_un("orchidéeMoyenne", "MediumOrchid", 4)
 map_with_un("orchidéeFoncé", "DarkOrchid", 4)
-map_wit_default("violet", "purple", 4)
+map_with_default("violet", "purple", 4)
 map_with_un("violetMoyenne", "MediumPurple", 4)
-map_wit_default("chardon", "thistle", 4)
+map_with_default("chardon", "thistle", 4)
 COULEUR_ = {v: k for k, v in COULEUR.items()}
 
 déf tocol(c):
