@@ -2,7 +2,7 @@
 # Posted by Trelzevir, modified by community. See post 'Timeline' for change history
 # Retrieved 2026-04-19, License - CC BY-SA 3.0
 
-AVALIABLE_COLORS  = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
+AVAILABLE_COLORS  = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', 'old lace',
 'linen', 'antique white', 'papaya whip', 'blanched almond', 'bisque', 'peach puff',
 'navajo white', 'lemon chiffon', 'mint cream', 'azure', 'alice blue', 'lavender',
 'lavender blush', 'misty rose', 'dark slate gray', 'dim gray', 'slate gray',
@@ -129,7 +129,7 @@ tiroir = tortue.Tortue()
 tiroir.vitesse(0)  # Vitesse dessin la plus rapide
 tiroir.tortuecachée()
 
-batches = list(batched(AVALIABLE_COLORS, 12 * 5))
+batches = list(batched(AVAILABLE_COLORS, 12 * 5))
 current_batch = 0
 def print_batch():
     c_b = batches[current_batch]
